@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>学生详细信息</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{% static 'images/home.ico' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'images/home.ico' %}" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/my.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+    <script src="{% static 'scripts/bootstrap.min.js' %}"></script>
+  </head>
+<body>
+    <header class="cui-header"></header>
+    <div class="container page-header">
+        <h3 style="float:left;margin-top:-5px;">详细信息</h3>
+    </div>
+    <div class="container page-body">
+        <div class="col-md-9" role="main">
+            <div class="body-main">
+                <div>
+                    <ul style="padding-left: 5px; text-align: left; list-style:none; float:left;">
+                        <li>
+                            <span class="detail">学号： {{student.sid}}</span>
+                        </li>
+                        <li>
+                            <span class="detail">用户： {{student.username}}</span>
+                        </li>
+                        <li>
+                            <span class="detail">姓名： {{student.name}}</span>
+                        </li>
+                        <li>
+                            <span class="detail">段位： {{student.level}}</span>
+                        </li>
+                        <li>
+                            <span class="detail">积分： {{student.credits}}</span>
+                        </li>
+                        <li>
+                            <span class="detail">班级： {{student.class_id}}</span>
+                        </li>
+                        <li>
+                            <span class="detail">赢盘： {{student.num_of_win}}</span>
+                        </li>
+                        <li>
+                            <span class="detail">输盘： {{student.num_of_failure}}</span>
+                        </li>
+                        <li>
+                            <span class="detail">连赢： {{student.winning_streak}}</span>
+                        </li>
+                        <li>
+                            <span class="detail">连输： {{student.losing_streak}}</span>
+                        </li>
+                        <li>
+                            <span class="detail">邮箱: </span>
+                            <span class="detail">{{student.email}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <p><a href="/teacher/" class="back">返回主页</a></p>
+        </div>
+    </div>
+    <div style="height:30px;">
+    </div>
+    <div class="footer">
+        <h5>{{ now }}</h5>
+    </div>
+</body>
+</html>
