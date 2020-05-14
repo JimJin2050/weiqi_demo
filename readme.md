@@ -4,10 +4,13 @@
 
 ## Run
 1. Go to the folder of project, run command:
+
    python manage.py runserver your_ip:8000
    
 2. Launch weiqi server:
    cd weiqi
+
    npm install 
+
    npm start
 
